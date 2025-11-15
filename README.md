@@ -1,2 +1,1 @@
-# Undertale
-Undertale for the web.
+I'm basically just stealing web games and putting them on my GitHub to unblock them. Nice thing to have for curing your boredum in class.
