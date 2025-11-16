@@ -457,16 +457,18 @@
       var startingHeight, startingWidth;
       var startingAspect;
       var Module = {
-		  var DRIVE_UNX_URL = "https://drive.google.com/uc?export=download&id=1g67nFZprsFDS9zgQB8FmLo6s7LRRagib";
-
-		Module.locateFile = function(path) {
-   		 if (path.endsWith("game.unx")) {
-        return DRIVE_UNX_URL;
-    	}
-    		return path;
-		};
         preRun: [],
         postRun: [],
+		<script>
+			var DRIVE_UNX_URL = "https://drive.google.com/uc?export=download&id=1g67nFZprsFDS9zgQB8FmLo6s7LRRagib";
+			Module.locateFile = function(path) {
+    if (path.endsWith("game.unx")) {
+        return DRIVE_UNX_URL;
+    }
+    return path;
+};
+</script>
+	  };
         print: (function () {
           var element = document.getElementById("output");
           if (element) element.value = ""; // clear browser cache
